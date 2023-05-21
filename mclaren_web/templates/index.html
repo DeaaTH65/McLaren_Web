@@ -1,66 +1,55 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: cyan;
-        }
-    </style>
 
-    <title>mclaren</title>    
-    
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="logo.png" alt="" width="130" height="40"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Our Products
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">720 S</a></li>
-                  <li><a class="dropdown-item" href="#">750 S</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">765 LT</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+
+{% block body %}
+<div id="" class="container-fluid" style="text-align: justify">
+<h1 align= "center" style="color:red;">McLaren</h1>
+
+<p style="font-size:17px;">
+  McLaren Automotive is a British luxury automotive manufacturer based at the McLaren Technology Centre in Woking, England. The main products of the company are sports cars, which are produced in-house in designated production facilities.
+  McLaren is now in the business of building high-performance road cars that are capable of putting Lamborghinis and Ferraris to shame. So far, McLaren is one of the few remaining automakers that hasn't produced an SUV, sticking exclusively to exotic sports cars and hypercars. The British automaker's products all carry prices in the six-figure range, including the plug-in-hybrid Artura, the gorgeous 720S, and the GT grand tourer.
+</p>
+</div>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade container-fluid" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="static/home1.png" class="d-block w-100" height="500" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>McLaren Headquarter</h5>
+          <p>This is the main headquarter of McLaren.</p>
         </div>
-      </nav>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="static/home2.png" class="d-block w-100" height="500" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>F1 Race Car</h5>
+          <p>This is the formula 1 race car of McLaren.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/home3.png" class="d-block w-100"height="500" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Cars</h5>
+          <p>These are some of the show piece cars of McLaren.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
-      <h1> This is homepage of McLaren </h1>
-
-    
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    
-  </body>
-</html>
+{% endblock body %}
